@@ -11,7 +11,7 @@ public class Anagrams {
 
     public static void getAnagramsList() throws IOException {
         try {
-            String inputFileName = "C:\\Users\\test\\Downloads\\NewWordList.txt";
+            String inputFileName = "NewWordList.txt";
             BufferedReader reader = new BufferedReader(new FileReader(inputFileName));
             HashMap<String, ArrayList<String>> word_list = new HashMap<String, ArrayList<String>>();
 
@@ -32,7 +32,7 @@ public class Anagrams {
 
             reader.close();
 
-            String outputFileName = "C:\\Users\\test\\Downloads\\NewAnagramList.txt";
+            String outputFileName = "NewAnagramList.txt";
             BufferedWriter br = new BufferedWriter(new FileWriter(new File(outputFileName)));
              for (ArrayList<String> list:word_list.values())
                  if (list.size() > 1) {
